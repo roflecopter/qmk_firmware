@@ -117,7 +117,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_SYS_ARR] = LAYOUT(
         KC_COLN, KC_DQT, KC_BTN1, KC_BTN2, KC_ESC,  KC_CAPS, KC_HOME, KC_UP,   KC_END, KC_PGUP,
         KC_TAB,  OLCTL,  OLALT,   OLGUI,   KC_BSPC, KC_PMNS, KC_LEFT, KC_DOWN, KC_RGHT, KC_PGDN,
-        KC_NO, 	 KC_DLR, KC_HASH, KC_AT,   KC_ENT,  KC_PPLS, KC_WH_U, TSYSM,   KC_WH_D, KC_NO,
+        KC_NO, 	 KC_DLR, KC_HASH, KC_AT,   KC_ENT,  KC_PPLS, KC_WH_U, QK_REP,   KC_WH_D, KC_NO,
         		          TMAIN,   SYSA,    SYMN,    OLSFT
     ),
 };
