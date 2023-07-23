@@ -16,19 +16,27 @@
 
 #pragma once
 
-// Not yet available in `keymap.json` format
-#ifdef RGB_MATRIX_ENABLE
-#    define RGB_DISABLE_WHEN_USB_SUSPENDED
-#    define RGB_MATRIX_KEYPRESSES
-#    define ENABLE_RGB_MATRIX_SOLID_REACTIVE_SIMPLE
-#    define ENABLE_RGB_MATRIX_SOLID_SPLASH
-#    define ENABLE_RGB_MATRIX_RAINBOW_BEACON 
+#define LED_CAPS_LOCK_PIN 24
+#define LED_PIN_ON_STATE 0
+
+#define TAPPING_TERM 200
+#define COMBO_COUNT 10
+#define COMBO_TERM 200
+
+#ifdef RGBLIGHT_ENABLE
+#   define RGBLIGHT_EFFECT_BREATHING
 #endif
 
-// Not yet available in `keymap.json` format
-#ifdef MOUSEKEY_ENABLE
-     // The default is 100
-#    define MOUSEKEY_WHEEL_INTERVAL 50
-     // The default is 40
-#    define MOUSEKEY_WHEEL_TIME_TO_MAX 100
-#endif
+#define ONESHOT_TAP_TOGGLE 5  /* Tapping this number of times holds the key until tapped once again. */
+#define ONESHOT_TIMEOUT 5000  /* Time (in ms) before the one shot key is released */
+
+#define MOUSEKEY_DELAY            	0	
+#define MOUSEKEY_INTERVAL          	30
+#define MOUSEKEY_MOVE_DELTA		8
+#define MOUSEKEY_MAX_SPEED         	5
+#define MOUSEKEY_TIME_TO_MAX       	60
+#define MOUSEKEY_WHEEL_DELAY		10
+#define MOUSEKEY_WHEEL_INTERVAL		103
+#define MOUSEKEY_WHEEL_MAX_SPEED   	8
+#define MOUSEKEY_WHEEL_TIME_TO_MAX 	45
+
