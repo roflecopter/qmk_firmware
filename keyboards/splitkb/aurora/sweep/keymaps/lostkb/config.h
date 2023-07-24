@@ -24,7 +24,7 @@
 #define COMBO_TERM 200
 
 #ifdef RGBLIGHT_ENABLE
-#   define RGBLIGHT_EFFECT_BREATHING
+#define RGBLIGHT_EFFECT_RAINBOW_MOOD
 #endif
 
 #define ONESHOT_TAP_TOGGLE 5  /* Tapping this number of times holds the key until tapped once again. */
