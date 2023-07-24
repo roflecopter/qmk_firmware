@@ -86,9 +86,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [_SYM_FN] = LAYOUT(
         KC_F1, 	KC_F2, KC_F3,   KC_F4,   KC_F5,   KC_F6, KC_F7,   KC_F8,   KC_F9,  KC_F10,
-        KC_TAB, OLCTL, OLALT,   OLGUI,   KC_BSPC, KC_NO, KC_BSLS, KC_PIPE, KC_NO,  KC_F11,
+        KC_TAB, OLCTL, OLALT,   OLGUI,   KC_DEL,  KC_NO, KC_BSLS, KC_PIPE, KC_NO,  KC_F11,
         KC_NO, 	KC_NO, CG_LSWP, CG_LNRM, KC_ENT,  KC_NO, KC_GRV,  KC_CIRC, KC_F12, KC_NO,
-        			TMAIN,    SYSA,    SYMN,  OLSFT
+        			TMAIN,    SYSA,   SYMN,  OLSFT
     ),
     [_GAME] = LAYOUT(
         KC_TAB,  KC_Q, KC_W, KC_E,   KC_R,  KC_Y,  KC_U, KC_I,  KC_PGUP,  KC_ESC,
@@ -115,7 +115,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         		          TMAIN,   SYSA,    SYMN,   OLSFT
     ),
     [_SYS_ARR] = LAYOUT(
-        KC_COLN, KC_DQT, KC_BTN1, KC_BTN2, KC_ESC,  KC_CAPS, KC_HOME, KC_UP,   KC_END, KC_PGUP,
+        KC_COLN, KC_DQT, KC_BTN1, KC_BTN2, KC_ESC,  CW_TOGG, KC_HOME, KC_UP,   KC_END, KC_PGUP,
         KC_TAB,  OLCTL,  OLALT,   OLGUI,   KC_BSPC, KC_PMNS, KC_LEFT, KC_DOWN, KC_RGHT, KC_PGDN,
         KC_NO, 	 KC_DLR, KC_HASH, KC_AT,   KC_ENT,  KC_PPLS, KC_WH_U, QK_REP,   KC_WH_D, KC_NO,
         		          TMAIN,   SYSA,    SYMN,    OLSFT
