@@ -88,7 +88,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_F1, 	KC_F2, KC_F3,   KC_F4,   KC_F5,   KC_F6, KC_F7,   KC_F8,   KC_F9,  KC_F10,
         KC_TAB, OLCTL, OLALT,   OLGUI,   KC_DEL,  KC_NO, KC_BSLS, KC_PIPE, KC_NO,  KC_F11,
         KC_NO, 	KC_NO, CG_LSWP, CG_LNRM, KC_ENT,  KC_NO, KC_GRV,  KC_CIRC, KC_F12, KC_NO,
-        			TMAIN,    SYSA,   SYMN,  OLSFT
+        			TMAIN,    SYSA,    SYMN,  OLSFT
     ),
     [_GAME] = LAYOUT(
         KC_TAB,  KC_Q, KC_W, KC_E,   KC_R,  KC_Y,  KC_U, KC_I,  KC_PGUP,  KC_ESC,
@@ -103,10 +103,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         		     	       KC_LALT,   TGAME,     KC_NO, TMAIN
     ),
     [_MEDIA] = LAYOUT(
-        QK_RBT,  KC_NO, KC_NO, KC_NO, KC_VOLU, KC_BRIU, KC_NO, KC_NO, KC_NO, KC_NO,
-        QK_BOOT, KC_NO, KC_NO, KC_NO, KC_VOLD, KC_BRID, KC_NO, KC_NO, KC_NO, TGAME,
-        KC_NO, 	 KC_NO, KC_NO, KC_NO, KC_MUTE, KC_NO,   KC_NO, KC_NO, KC_NO, KC_NO,
-        		       TMAIN, SYSA,    SYMN,    OLSFT
+        QK_RBT,  KC_PWR,  KC_KB_POWER, KC_NO, KC_VOLU, KC_BRIU, RGB_HUI, RGB_SAI, RGB_VAI, KC_NO,
+        QK_BOOT, KC_SLEP, KC_NO,       KC_NO, KC_VOLD, KC_BRID, RGB_HUD, RGB_SAD, RGB_VAD, TGAME,
+        KC_NO, 	 KC_WAKE, KC_NO,       KC_NO, KC_MUTE, RGB_TOG, RGB_MOD, KC_NO,   KC_NO,   KC_NO,
+        		               TMAIN, SYSA,    SYMN,    OLSFT
     ),
     [_SYS_MOU] = LAYOUT(
         KC_COLN, KC_DQT, KC_BTN1, KC_BTN2, KC_ESC,  KC_CAPS, KC_WH_L, KC_MS_U, KC_WH_R, KC_ACL2,
@@ -117,7 +117,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_SYS_ARR] = LAYOUT(
         KC_COLN, KC_DQT, KC_BTN1, KC_BTN2, KC_ESC,  CW_TOGG, KC_HOME, KC_UP,   KC_END, KC_PGUP,
         KC_TAB,  OLCTL,  OLALT,   OLGUI,   KC_BSPC, KC_PMNS, KC_LEFT, KC_DOWN, KC_RGHT, KC_PGDN,
-        KC_NO, 	 KC_DLR, KC_HASH, KC_AT,   KC_ENT,  KC_PPLS, KC_WH_U, QK_REP,   KC_WH_D, KC_NO,
+        KC_NO, 	 KC_DLR, KC_HASH, KC_AT,   KC_ENT,  KC_PPLS, KC_WH_U, QK_REP,  KC_WH_D, KC_NO,
         		          TMAIN,   SYSA,    SYMN,    OLSFT
     ),
 };
@@ -125,8 +125,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 #ifdef RGBLIGHT_ENABLE
 void keyboard_post_init_user(void) {
   rgblight_enable_noeeprom(); // enables RGB, without saving settings
-  rgblight_sethsv_noeeprom(HSV_RED); // sets the color to red without saving
-  rgblight_mode_noeeprom(RGBLIGHT_MODE_BREATHING + 3); // sets mode to Fast breathing without saving
+  rgblight_sethsv_noeeprom(HSV_PURPLE); // sets the color to red without saving
+  rgblight_mode_noeeprom(RGBLIGHT_EFFECT_RAINBOW_MOOD + 3); // sets mode to Fast breathing without saving
 }
 #endif
 
