@@ -24,6 +24,8 @@
 #define _MEDIA 5
 #define _SYS_MOU 6
 #define _SYS_ARR 7
+#define _MK_TYPE 8
+#define _SYS_ARM 9
 
 #define MEHS MEH_T(KC_SPC)
 #define OLSFT OSM(MOD_LSFT)
@@ -32,11 +34,13 @@
 #define OLALT OSM(MOD_LALT)
 
 #define SYSA OSL(_SYS_ARR)
+#define SYSAM OSL(_SYS_ARM)
 #define SYMN OSL(_SYM_NUM)
 #define SYMF OSL(_SYM_FN)
 #define TMAIN TO(_MAIN)
 #define GAMEN TT(_GAME_NUM)
 #define TGAME TO(_GAME)
+#define TMK_TYPE TO(_MK_TYPE)
 #define TSYSA TO(_SYS_ARR)
 #define TSYSM TO(_SYS_MOU)
 #define TMEDI TO(_MEDIA)
@@ -107,7 +111,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //│ TAB      │ OSM LCTRL│ OSM LALT │ OSM LGUI │ DELETE   │   │          │ \        │ |        │          │ F11      │
     KC_TAB   , OLCTL    , OLALT    , OLGUI    , KC_DEL   ,     KC_NO    , KC_BSLS  , KC_PIPE  , KC_NO    , KC_F11   ,
 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-//│          │          │ SWP CTRL │ BCK CTRL │ ENTER    │   │          │ `        │ ^        │ F12      │          │
+//│          │          │ SWAP CTRL│UNSWP CTRL│ ENTER    │   │          │ `        │ ^        │ F12      │          │
     KC_NO    , KC_NO    , CG_LSWP  , CG_LNRM  , KC_ENT   ,     KC_NO    , KC_GRV   , KC_CIRC  , KC_F12   , KC_NO    ,
 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
 //				   │ ->MAIN   │ ->SYS-ARR│   │ ->SYM-NUM│OSM LSHIFT│
@@ -146,8 +150,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      ),
     [_MEDIA] = LAYOUT(
 //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-//│ REBOOT KB│ POWER    │          │          │ VOLUME+  │   │ BRGHTNS+ │ RGB HUE+ │ RGB SAT+ │ RGB BRGH+│          │
-    QK_RBT   , KC_PWR   , KC_NO    , KC_NO    , KC_VOLU  ,     KC_BRIU  , RGB_HUI  , RGB_SAI  , RGB_VAI  , KC_NO    ,
+//│ REBOOT KB│ POWER    │          │          │ VOLUME+  │   │ BRGHTNS+ │ RGB HUE+ │ RGB SAT+ │ RGB BRGH+│ ->MK_TYPE│
+    QK_RBT   , KC_PWR   , KC_NO    , KC_NO    , KC_VOLU  ,     KC_BRIU  , RGB_HUI  , RGB_SAI  , RGB_VAI  , TMK_TYPE ,
 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
 //│ BOOT KB  │ SLEEP    │          │          │ VOLUME-  │   │ BRGHTNS- │ RGB HUE- │ RGB SAT- │ RGB BRGH-│ ->GAME   │
     QK_BOOT  , KC_SLEP  , KC_NO    , KC_NO    , KC_VOLD  ,     KC_BRID  , RGB_HUD  , RGB_SAD  , RGB_VAD  , TGAME    ,
@@ -189,7 +193,37 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
          		             TMAIN    , SYSA     ,     SYMN     ,    OLSFT
 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
      ),
-};
+    [_MK_TYPE] = LAYOUT(
+//╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+//│ Y        │ C        │ L        │ M        │ K        │   │ Z        │ F        │ U        │ Q        │ X        │
+    KC_Y     , KC_C     , KC_L     , KC_M     , KC_K     ,     KC_Z     , KC_F     , KC_U     , KC_Q     , KC_X     ,
+//├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+//│ I        │ S        │ R        │ T        │ G        │   │ P        │ N        │ E        │ A        │ O        │
+    KC_I     , KC_S     , KC_R     , KC_T     , KC_G     ,     KC_P     , KC_N     , KC_E     , KC_A     , KC_O     ,
+//├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+//│          │ V        │ W        │ D        │ J        │   │ B        │ H        │ ,        │ .        │          │
+    KC_NO    , KC_V     , KC_W     , KC_D     , KC_J     ,     KC_B     , KC_H     , KC_COMMA , KC_DOT   , KC_NO    ,
+//╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+//				   │ MEH & SPC│ ->SYS-ARM│   │ ->SYM-NUM│OSM LSHIFT│
+        		             MEHS     , SYSAM     ,     SYMN     , OLSFT
+//                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+    ),
+    [_SYS_ARM] = LAYOUT(
+//╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+//│ :        │ "        │ MOUSE 1  │ MOUSE 2  │ ESC      │   │ CAPSWORD │ HOME     │ UP       │ END      │ PAGE UP  │
+    KC_COLN  , KC_DQT   , KC_BTN1  , KC_BTN2  , KC_ESC   ,     CW_TOGG  , KC_HOME  , KC_UP    , KC_END   , KC_PGUP  ,
+//├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+//│ TAB      │ OSM LGUI │ OSM LCTRL│ OSM LCTRL│ BACKSPACE│   │ -        │ LEFT     │ DOWN     │ RIGHT    │ PAGE DOWN│
+    KC_TAB   , OLGUI    , OLCTL    , OLCTL    , KC_BSPC  ,     KC_PMNS  , KC_LEFT  , KC_DOWN  , KC_RGHT  , KC_PGDN  ,
+//├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+//│          │ $        │ #        │ @        │ ENTER    │   │ +        │ WHEEL UP │ REPEAT   │WHEEL DOWN│          │
+    KC_NO    , KC_DLR   , KC_HASH  , KC_AT    , KC_ENT   ,     KC_PPLS  , KC_WH_U  , QK_REP   , KC_WH_D  , KC_NO    ,
+//╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+//				   │ ->MAIN   │ ->SYS-ARR│   │ ->SYM-NUM│OSM LSHIFT│
+         		             TMAIN    , SYSA     ,     SYMN     ,    OLSFT
+//                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+     ),
+  };
 
 #ifdef RGBLIGHT_ENABLE
 void keyboard_post_init_user(void) {
