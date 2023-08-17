@@ -16,8 +16,8 @@
 
 #include QMK_KEYBOARD_H
 
-#define _MAIN 1
-#define _MAIN_WIN 0
+#define _MAIN 0
+#define _MAIN_WIN 1
 #define _SYM_NUM 2
 #define _SYM_NUM_WIN 3
 #define _SYM_FN 4

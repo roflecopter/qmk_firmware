@@ -31,11 +31,11 @@
 #define ONESHOT_TIMEOUT 5000  /* Time (in ms) before the one shot key is released */
 
 #define MOUSEKEY_DELAY            	0	
-#define MOUSEKEY_INTERVAL          	30
+#define MOUSEKEY_INTERVAL          	32
 #define MOUSEKEY_MOVE_DELTA		8
 #define MOUSEKEY_MAX_SPEED         	5
 #define MOUSEKEY_TIME_TO_MAX       	60
-#define MOUSEKEY_WHEEL_DELAY		10
+#define MOUSEKEY_WHEEL_DELAY		0
 #define MOUSEKEY_WHEEL_INTERVAL		103
 #define MOUSEKEY_WHEEL_MAX_SPEED   	8
 #define MOUSEKEY_WHEEL_TIME_TO_MAX 	45
