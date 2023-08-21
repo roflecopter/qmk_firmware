@@ -65,7 +65,7 @@
 #define SYSARRMK OSL(_SYS_ARR_MK)
 
 //Tap Dance Declarations
-#define TD_TN 0 
+#define TD_TN 0
 #define TD_46 1
 #define TD_37 2
 #define TD_9H 3
@@ -89,7 +89,7 @@ const uint16_t PROGMEM combo_win_lang[] = {SYSAW, OLSFT, COMBO_END};
 const uint16_t PROGMEM combo_win_medi[] = {MEHS, SYMNW, COMBO_END};
 
 
-combo_t key_combos[] = { 
+combo_t key_combos[] = {
     COMBO(combo_sysm, TSYSM),
 
     COMBO(combo_mac_lang, LGUI(KC_SPC)),
@@ -114,8 +114,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //│          │ V        │ W        │ D        │ J        │   │ B        │ H        │ ,        │ .        │          │
     KC_NO    , KC_V     , KC_W     , KC_D     , KC_J     ,     KC_B     , KC_H     , KC_COMMA , KC_DOT   , KC_NO    ,
 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-//				   │ MEH & SPC│ ->SYS-ARR│   │ ->SYM-NUM│OSM LSHIFT│
-        		             MEHS     , SYSA     ,     SYMN     , OLSFT
+//              				   │ MEH & SPC│ ->SYS-ARR│   │ ->SYM-NUM│OSM LSHIFT│
+        		                     MEHS     , SYSA     ,     SYMN     , OLSFT
 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
     ),
     [_MAIN_WIN] = LAYOUT(
@@ -129,8 +129,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //│          │ V        │ W        │ D        │ J        │   │ B        │ H        │ ,        │ .        │          │
     KC_NO    , KC_V     , KC_W     , KC_D     , KC_J     ,     KC_B     , KC_H     , KC_COMMA , KC_DOT   , KC_NO    ,
 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-//				   │ MEH & SPC│ ->SYS-ARR│   │ ->SYM-NUM│OSM LSHIFT│
-        		             MEHS     , SYSAW    ,     SYMNW    , OLSFT
+//				                   │ MEH & SPC│ ->SYS-ARR│   │ ->SYM-NUM│OSM LSHIFT│
+        		                     MEHS     , SYSAW    ,     SYMNW    , OLSFT
 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
     ),
     [_SYM_NUM] = LAYOUT(
@@ -139,13 +139,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_1     , KC_2     , KC_3     , KC_4     , KC_5     ,     KC_6     , KC_7     , KC_8     , KC_9     , KC_0     ,
 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
 //│ %        │ {        │ (        │ [        │ _        │   │ -        │ /        │ !        │ ~        │ =        │
-    KC_PERC  , KC_LCBR  , KC_LPRN  , KC_LBRC  , KC_UNDS  ,     KC_PMNS  , KC_SLSH  , KC_EXLM  , KC_TILD  , KC_PEQL  ,
+    KC_PERC  , KC_LCBR  , KC_LPRN  , KC_LBRC  , KC_UNDS  ,     KC_PMNS  , KC_SLSH  , KC_EXLM  , KC_TILD  , KC_EQL   ,
 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
 //│          │ }        │ )        │ ]        │ *        │   │ +        │ '        │ ;        │ &        │          │
     KC_NO    , KC_RCBR  , KC_RPRN  , KC_RBRC  , KC_PAST  ,     KC_PPLS  , KC_QUOT  , KC_SCLN  , KC_AMPR  , KC_NO    ,
 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-//				   │ ->MAIN   │ ->SYS-ARR│   │ ->SYM-FN │OSM LSHIFT│
-        			     TMAIN    , SYSA     ,     SYMF     , OLSFT
+//	                			   │ ->MAIN   │ ->SYS-ARR│   │ ->SYM-FN │OSM LSHIFT│
+        			                 TMAIN    , SYSA     ,     SYMF     , OLSFT
 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
      ),
     [_SYM_NUM_WIN] = LAYOUT(
@@ -154,13 +154,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_1     , KC_2     , KC_3     , KC_4     , KC_5     ,     KC_6     , KC_7     , KC_8     , KC_9     , KC_0     ,
 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
 //│ %        │ {        │ (        │ [        │ _        │   │ -        │ /        │ !        │ ~        │ =        │
-    KC_PERC  , KC_LCBR  , KC_LPRN  , KC_LBRC  , KC_UNDS  ,     KC_PMNS  , KC_SLSH  , KC_EXLM  , KC_TILD  , KC_PEQL  ,
+    KC_PERC  , KC_LCBR  , KC_LPRN  , KC_LBRC  , KC_UNDS  ,     KC_PMNS  , KC_SLSH  , KC_EXLM  , KC_TILD  , KC_EQL   ,
 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
 //│          │ }        │ )        │ ]        │ *        │   │ +        │ '        │ ;        │ &        │          │
     KC_NO    , KC_RCBR  , KC_RPRN  , KC_RBRC  , KC_PAST  ,     KC_PPLS  , KC_QUOT  , KC_SCLN  , KC_AMPR  , KC_NO    ,
 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-//				   │ ->MAIN   │ ->SYS-ARR│   │ ->SYM-FN │OSM LSHIFT│
-        			     TMAINW   , SYSAW    ,     SYMFW    , OLSFT
+//              				   │ ->MAIN   │ ->SYS-ARR│   │ ->SYM-FN │OSM LSHIFT│
+        		            	     TMAINW   , SYSAW    ,     SYMFW    , OLSFT
 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
      ),
     [_SYM_FN] = LAYOUT(
@@ -174,8 +174,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //│          │          │          │          │ ENTER    │   │          │ `        │ ^        │ F12      │          │
     KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_ENT   ,     KC_NO    , KC_GRV   , KC_CIRC  , KC_F12   , KC_NO    ,
 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-//				   │ ->MAIN   │ ->SYS-ARR│   │ ->SYM-NUM│OSM LSHIFT│
-         			     TMAIN    , SYSA     ,     SYMN     , OLSFT
+//              				   │ ->MAIN   │ ->SYS-ARR│   │ ->SYM-NUM│OSM LSHIFT│
+         		            	     TMAIN    , SYSA     ,     SYMN     , OLSFT
 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
      ),
      [_SYM_FN_WIN] = LAYOUT(
@@ -189,8 +189,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //│          │          │          │          │ ENTER    │   │          │ `        │ ^        │ F12      │          │
     KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_ENT   ,     KC_NO    , KC_GRV   , KC_CIRC  , KC_F12   , KC_NO    ,
 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-//				   │ ->MAIN   │ ->SYS-ARR│   │ ->SYM-NUM│OSM LSHIFT│
-         			     TMAINW   , SYSAW    ,     SYMNW    , OLSFT
+//				                   │ ->MAIN   │ ->SYS-ARR│   │ ->SYM-NUM│OSM LSHIFT│
+         			                 TMAINW   , SYSAW    ,     SYMNW    , OLSFT
 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
      ),
     [_GAME] = LAYOUT(
@@ -204,8 +204,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //│          │ Z        │ X        │ C        │ V        │   │ N        │ M        │ ,        │ .        │          │
     KC_NO    , KC_Z     , KC_X     , KC_C     , KC_V     ,     KC_N     , KC_M     , KC_COMMA , KC_DOT   , KC_NO    ,
 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-//				   │ SPACE    │ ->GAM-NUM│   │          │ ->MAIN   │
-         		             KC_SPC   , GAMEN    ,     KC_NO    , TMAINW
+//              				   │ SPACE    │ ->GAM-NUM│   │          │ ->MAIN   │
+         		                     KC_SPC   , GAMEN    ,     KC_NO    , TMAINW
 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
      ),
     [_GAME_NUM] = LAYOUT(
@@ -219,8 +219,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //│          │ 8        │ 9 & H    │ 0        │ B        │   │ N        │ M        │ ,        │ .        │          │
     KC_NO    , KC_8     , TD(TD_9H), KC_0     , KC_B     ,     KC_N     , KC_M     , KC_COMMA , KC_DOT   , KC_NO    ,
 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-//				   │ L ALT    │ ->GAME   │   │          │          │
-         		     	     KC_LALT  , TGAME    ,     KC_NO    , KC_NO
+//              				   │ L ALT    │ ->GAME   │   │          │          │
+         		             	     KC_LALT  , TGAME    ,     KC_NO    , KC_NO
 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
      ),
     [_MEDIA] = LAYOUT(
@@ -234,8 +234,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //│          │ WAKE     │          │          │ MUTE     │   │RGB ON/OFF│ RGB MODE │          │          │          │
     KC_NO    , KC_WAKE  , KC_NO    , KC_NO    , KC_MUTE  ,     RGB_TOG  , RGB_MOD  , KC_NO    , KC_NO    , KC_NO    ,
 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-//				   │ ->MAIN   │ ->SYS-ARR│   │ ->SYM-NUM│OSM LSHIFT│
-         		             TMAIN    , SYSA     ,     SYMN     , OLSFT
+//              				   │ ->MAIN   │ ->SYS-ARR│   │ ->SYM-NUM│OSM LSHIFT│
+         		                     TMAIN    , SYSA     ,     SYMN     , OLSFT
 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
      ),
     [_MEDIA_WIN] = LAYOUT(
@@ -249,8 +249,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //│          │ WAKE     │          │          │ MUTE     │   │RGB ON/OFF│ RGB MODE │          │          │          │
     KC_NO    , KC_WAKE  , KC_NO    , KC_NO    , KC_MUTE  ,     RGB_TOG  , RGB_MOD  , KC_NO    , KC_NO    , KC_NO    ,
 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-//				   │ ->MAIN   │ ->SYS-ARR│   │ ->SYM-NUM│OSM LSHIFT│
-         		             TMAINW   , SYSAW    ,     SYMNW    , OLSFT
+//              				   │ ->MAIN   │ ->SYS-ARR│   │ ->SYM-NUM│OSM LSHIFT│
+         		                     TMAINW   , SYSAW    ,     SYMNW    , OLSFT
 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
      ),
     [_SYS_MOU] = LAYOUT(
@@ -264,8 +264,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //│          │          │          │          │ ENTER    │   │ +        │ WHEEL UP │ ->SYS-ARR│WHEEL DOWN│          │
     KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_ENT   ,     KC_PPLS  , KC_WH_U  , TSYSA    , KC_WH_D  , KC_NO    ,
 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-//				   │ ->MAIN   │ ->SYS-ARR│   │ ->SYM-NUM│OSM LSHIFT│
-         		             TMAIN    , SYSA     ,     SYMN     , OLSFT
+//              				   │ ->MAIN   │ ->SYS-ARR│   │ ->SYM-NUM│OSM LSHIFT│
+         		                     TMAIN    , SYSA     ,     SYMN     , OLSFT
 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
      ),
     [_SYS_ARR] = LAYOUT(
@@ -279,8 +279,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //│          │ $        │ #        │ @        │ ENTER    │   │ +        │ WHEEL UP │ REPEAT   │WHEEL DOWN│          │
     KC_NO    , KC_DLR   , KC_HASH  , KC_AT    , KC_ENT   ,     KC_PPLS  , KC_WH_U  , QK_REP   , KC_WH_D  , KC_NO    ,
 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-//				   │ ->MAIN   │ ->SYS-ARR│   │ ->SYM-NUM│OSM LSHIFT│
-         		             TMAIN    , SYSA     ,     SYMN     ,    OLSFT
+//              				   │ ->MAIN   │ ->SYS-ARR│   │ ->SYM-NUM│OSM LSHIFT│
+         		                     TMAIN    , SYSA     ,     SYMN     ,    OLSFT
 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
      ),
     [_SYS_MOU_WIN] = LAYOUT(
@@ -294,8 +294,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //│          │          │          │          │ ENTER    │   │ +        │ WHEEL UP │ ->SYS-ARR│WHEEL DOWN│          │
     KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_ENT   ,     KC_PPLS  , KC_WH_U  , TSYSAW   , KC_WH_D  , KC_NO    ,
 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-//				   │ ->MAIN   │ ->SYS-ARR│   │ ->SYM-NUM│OSM LSHIFT│
-         		             TMAINW   , SYSAW    ,     SYMNW    , OLSFT
+//              				   │ ->MAIN   │ ->SYS-ARR│   │ ->SYM-NUM│OSM LSHIFT│
+         		                     TMAINW   , SYSAW    ,     SYMNW    , OLSFT
 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
      ),
     [_SYS_ARR_WIN] = LAYOUT(
@@ -309,8 +309,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //│          │ $        │ #        │ @        │ ENTER    │   │ +        │ WHEEL UP │ REPEAT   │WHEEL DOWN│          │
     KC_NO    , KC_DLR   , KC_HASH  , KC_AT    , KC_ENT   ,     KC_PPLS  , KC_WH_U  , QK_REP   , KC_WH_D  , KC_NO    ,
 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-//				   │ ->MAIN   │ ->SYS-ARR│   │ ->SYM-NUM│OSM LSHIFT│
-         		             TMAINW   , SYSAW    ,     SYMNW    ,    OLSFT
+//              				   │ ->MAIN   │ ->SYS-ARR│   │ ->SYM-NUM│OSM LSHIFT│
+         		                     TMAINW   , SYSAW    ,     SYMNW    ,    OLSFT
 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
      ),
     [_MK] = LAYOUT(
@@ -324,8 +324,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //│          │ V        │ W        │ D        │ J        │   │ B        │ H        │ ,        │ .        │          │
     KC_NO    , KC_V     , KC_W     , KC_D     , KC_J     ,     KC_B     , KC_H     , KC_COMMA , KC_DOT   , KC_NO    ,
 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-//				   │ MEH & SPC│ ->SYS-ARM│   │ ->SYM-NUM│OSM LSHIFT│
-        		             MEHS     , SYSARRMK ,     SYMNW   , OLSFT
+//              				   │ MEH & SPC│ ->SYS-ARM│   │ ->SYM-NUM│OSM LSHIFT│
+        		                     MEHS     , SYSARRMK ,     SYMNW   , OLSFT
 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
     ),
     [_SYS_ARR_MK] = LAYOUT(
@@ -339,8 +339,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //│          │ $        │ #        │ @        │ ENTER    │   │ +        │ WHEEL UP │ REPEAT   │WHEEL DOWN│          │
     KC_NO    , KC_DLR   , KC_HASH  , KC_AT    , KC_ENT   ,     KC_PPLS  , KC_WH_U  , QK_REP   , KC_WH_D  , KC_NO    ,
 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-//				   │ ->MK     │ ->SYS-ARR│   │ ->SYM-NUM│OSM LSHIFT│
-         		             TMK      , SYSARRMK   ,     SYMNW    ,    OLSFT
+//              				   │ ->MK     │ ->SYS-ARR│   │ ->SYM-NUM│OSM LSHIFT│
+         		                     TMK      , SYSARRMK   ,     SYMNW    ,    OLSFT
 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
      ),
   };
